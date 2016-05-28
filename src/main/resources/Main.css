@@ -1,0 +1,45 @@
+#board{
+  -fx-fill: url("wood.jpg");
+}
+
+#wall{
+  -fx-fill: url("wallwood.jpg");
+}
+
+.root {
+  -fx-background-image: url("background.jpg");
+}
+
+.label {
+  -fx-font-size: 18px;
+  -fx-font-weight: bold;
+  -fx-text-fill: black;
+  -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+#Quoridor-text {
+  -fx-font-size: 32px;
+  -fx-font-family: "Arial Black";
+  -fx-fill: #818181;
+  -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+
+.main {
+  -fx-background-color: BLACK;
+}
+
+#pawn1{
+  -fx-fill: url("trump.jpg");
+}
+
+#pawn2{
+  -fx-fill: url("sanders.jpg");
+}
+
+#pawn3{
+  -fx-fill: url("clinton.jpg");
+}
+
+#pawn4{
+  -fx-fill: url("cruz.jpg");
+}

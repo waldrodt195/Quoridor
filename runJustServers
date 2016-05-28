@@ -1,0 +1,31 @@
+#!/bin/bash
+echo Building...
+./gradlew build -q
+
+count=$1
+
+if [[ count -eq 2 ]]; then
+        echo Starting two Servers
+        xterm -e java -cp build/libs/Quoridor-1.0.jar server.EchoServer --port 7070 --delay 1000 &
+        pid1=$!
+        xterm -e java -cp build/libs/Quoridor-1.0.jar server.EchoServer --port 7171 --delay 1000 &
+        pid2=$!
+        sleep 1
+
+else
+        echo Starting four Servers
+        xterm -e java -cp build/libs/Quoridor-1.0.jar server.EchoServer --port 7070 --delay 1000 &
+        pid1=$!
+
+        xterm -e java -cp build/libs/Quoridor-1.0.jar server.EchoServer --port 7171 --delay 1000 &
+        pid2=$!
+
+        xterm -e java -cp build/libs/Quoridor-1.0.jar server.EchoServer --port 7272 --delay 1000 &
+        pid3=$!
+
+        xterm -e java -cp build/libs/Quoridor-1.0.jar server.EchoServer --port 7373 --delay 1000 &
+        pid4=$!
+        sleep 1
+
+fi
+
